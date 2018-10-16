@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          <title>Pet Finder</title>
+     </head>
+     <body>
+          <h2>What Pet Your Have</h2>
+          <ol>
+               <ul>
+                    <li>DECLARE Spider</li>
+                    <li>DECLARE Parrot</li>
+                    <li>DECLARE Snake</li>
+                    <li>DECLARE Fish</li>
+                    <br>
+                    <li>DECLARE Hamster</li>
+                    <li>DECLARE Rabbit</li>
+                    <li>DECLARE Dog</li>
+                    <li>DECLARE Cat</li>
+               </ul>
+               DECLARE Questions
+               <ol>
+                    <li>Do you pefer a pet that walks on four legs ? </li>
+                    <ul>If YES
+                         <ul>branch off to Cat Dog Rabbit and Hamster</ul>
+                         <ol>
+                              <ul>Do you pefer a pet that you have to keep in a cage ?</ul>
+                              <ul>If YES
+                                   <ul>branch off to Hamster and Rabbit questions</ul>
+                                   <ol>
+                                        <ul>Do you pefer a pet that need a small cage or large cage ?</ul>
+                                        <ul>If  SMALL
+                                             <ul>DISPLAY Hamster</ul>
+                                        </ul>
+                                        <ul>If LARGE
+                                             <ul>DISPLAY Rabbit</ul>
+                                        </ul>
+                                   </ol>
+                              </ul>
+                              <br>
+                              <ul>If NO
+                                   <ul>branch off to Dog and Cat questions</ul>
+                                   <ol>
+                                        <ul>Do you pefer a pet that barks ?</ul>
+                                        <ul>If YES
+                                             <ul>DISPLAY Dog</ul>
+                                        </ul>
+                                        <ul>If NO
+                                             <ul>DISPLAY Cat</ul>
+                                        </ul>
+                                   </ol>
+                              </ul>
+                         </ol>
+                    </ul>
+                    <br>
+                    <br>
+                    <ul>If NO
+                         <ul>branch off to the Spider Parrot Snake and Fish questions</ul>
+                         <ol>
+                              <ul>Do you pefer a pet that  has legs ?</ul>
+                              <ul>If YES
+                                   <ul>branch off to the Spider and Parrot questions ?</ul>
+                                   <ol>
+                                        <ul>Do you pefer a pet that can curse you out ?</ul>
+                                        <ul>If YES
+                                             <ul>DISPLAY Parrot</ul>
+                                        </ul>
+                                        <ul>If NO
+                                             <ul>DISPLAY Spider</ul>
+                                        </ul>
+                                   </ol>
+                              </ul>
+                              <ul>If NO
+                                   <ul>branch off to the Fish and Snake questions</ul>
+                                   <ol>
+                                        <ul>Do you pefer a pet that live on both land and sea ?</ul>
+                                        <ul>If YES
+                                             <ul>DISPLAY Snake</ul>
+                                        </ul>
+                                        <ul>If NO
+                                             <ul>DISPLAY Fish</ul>
+                                        </ul>
+                                   </ol>
+                              </ul>
+                         </ol>
+                    </ul>
+               </ol>
+          </ol>
+          <form>
+               <input type="submit" value="Start" onclick="begin( )">
+          </form>
+     </body>
+     <script>
+          function begin(){
+               event.preventDefault ();
+               var first = prompt("Do you pefer a pet that walks on four legs YES/NO");
+               if(first.toLowerCase() == "yes"){
+                    var second = prompt("Do you pefer a pet that you have to keep in a cage YES/NO");
+                    if(second == "yes"){
+                         var third = prompt("Do you pefer a pet that need a small cage or large cage SMALL/LARGE");
+                         if(third.toLowerCase() == "small"){
+                              hamster = alert("YOU GET A HAMSTER");
+                         }
+                         if(third.toLowerCase() == "large"){
+                              rabbit = alert("YOU GET A RABBIT");
+                         }
+                    };
+                    if(second == "no"){
+                         var third = prompt("Do you pefer a pet that barks YES/NO");
+                         if(third== ("yes")){
+                              var dog = alert("YOU GET MAN BEST FRIEND")
+                         }
+                         if(third ==("no")){
+                              var cat = alert("YOU GARNER A FELINE GOOD ON YOU")
+                         }
+                         if(third !=('yes')) {
+                              stupid = alert("either you dumb or you stupid which one ?");
+                         };
+                    }
+               }         
+          console.log(first);
+               if(first.toLowerCase() == "no"){
+                    var second = prompt("Do you pefer a pet that has legs yes/no");
+                    if(second.toLowerCase() =="yes"){
+                         var third = prompt("Do you pefer a pet that can curse you out ?");
+                         if(third == "yes"){
+                              parrot = alert("GOOD LUCK WITH YOUR COCKATOO")
+                         }
+                         if(third == "no"){
+                              spider = alert("SPIDER YOU ARE ONE STRANGE INDIVIDUAL");
+                         }
+                         // else{
+                         //      nah = alert("NAH FAM YOU GONE CHOOSE TO START OVER")
+                         // }
+                    }
+                    if(second.toLowerCase() == "no"){
+                         var third = prompt("Do you pefer a pet that live on both land and sea ? yes/no")
+                         if(third.toLowerCase() == "yes"){
+                              snake = alert("YOU WANT A SNAKE ALRIGHT THAT YOUR PROBLEM")
+                         }
+                         if(third.toLowerCase() == "no"){
+                              fish = alert("FISH AND HERES  ANOTHER FISH JUST IN CASE")
+                         }
+                    }
+               }
+          }
+     </script>
+</html>
